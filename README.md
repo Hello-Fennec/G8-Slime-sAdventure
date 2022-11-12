@@ -1,1 +1,1 @@
-# G8-Slime-sAdventure
+# G8-SlimesAdventure
