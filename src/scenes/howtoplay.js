@@ -10,7 +10,7 @@ class howtoplay extends Phaser.Scene {
     }
 
     preload() {
-        // code here
+        
 
     }
 
