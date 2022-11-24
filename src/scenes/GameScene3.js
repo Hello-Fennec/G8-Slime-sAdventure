@@ -97,7 +97,7 @@ class GameScene3 extends Phaser.Scene {
         slime.setBounce(0.1);
         slime.setCollideWorldBounds(true);
         this.physics.add.collider(slime, bulletGroup, () => {
-            this.scene.start("GameScene");
+            this.scene.start("MainMenu");
         });
     }
 
