@@ -1,27 +1,23 @@
-import 'phaser';
-import Phaser from 'phaser';
-import GameScene from './scenes/GameScene';
-
-
+import "phaser";
+import Phaser from "phaser";
+import GameScene from "./scenes/GameScene";
+import GameScene2 from "./scenes/GameScene2";
+import GameScene3 from "./scenes/GameScene3";
 const config = {
     // For more settings see <https://github.com/photonstorm/phaser/blob/master/src/boot/Config.js>
     type: Phaser.WEBGL,
     pixelArt: true,
     roundPixels: true,
-    parent: 'content',
-    width: 450,
+    parent: "content",
+    width: 1260,
     height: 720,
     physics: {
-        default: 'arcade',
+        default: "arcade",
         arcade: {
-            debug: true
-        }
+            debug: true,
+        },
     },
-    scene: [
-        GameScene
-    ],
-    
-    
+    scene: [GameScene, GameScene2, GameScene3],
 };
 
 const game = new Phaser.Game(config);
