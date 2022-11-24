@@ -1,6 +1,5 @@
 import Phaser from "phaser";
-let bg1;
-let bg2;
+let bg;
 let Slime;
 let playButton;
 
@@ -14,8 +13,7 @@ class MainMenu extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bgmenu1','./src/scenes/image/backgrounds/png/bg04/Layers/Middle_Decor.png');
-        this.load.image('bgmenu2','./src/scenes/image/backgrounds/png/bg01/Layers/Ground.png');
+        this.load.image('bg','./src/scenes/image/Mainmenu/backGround.jpg')
         this.load.spritesheet('slime','./src/scenes/image/Slimes/slimeMove/Bluemove.png',{frameWidth: 80, frameHeight: 54});
         this.load.image('play','./src/scenes/image/Mainmenu/playButton.png');
         
@@ -24,16 +22,15 @@ class MainMenu extends Phaser.Scene {
 
     create() {
         //backgrounds
-        bg1 = this.add.image(630, 360, 'bgmenu1').setScale(0.7).setDepth(1);
-        bg2 = this.add.image(300, 200, 'bgmenu2').setDepth(2);
-       
+        bg = this.add.image(630, 360, 'bg').setDepth(0.1)
+        
 
         //character
         Slime = this.physics.add.sprite(150,650,'slime')
         .setScale(3)
         .setSize(25,20)
         .setOffset(23,15)
-        .setDepth(5)
+        .setDepth(1)
         this.anims.create({
            key: 'slimeAni',
            frames: this.anims.generateFrameNumbers('slime', {
@@ -46,7 +43,7 @@ class MainMenu extends Phaser.Scene {
 
 
         //button
-        playButton = this.add.image(900,250,'play').setScale(0.3).setDepth(3);
+        playButton = this.add.image(900,250,'play').setScale(0.3).setDepth(0.2);
         playButton.setInteractive();
         playButton.on('pointerup',()=>{
             this.scene.start('GameScene');
