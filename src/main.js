@@ -4,6 +4,8 @@ import GameScene from './scenes/GameScene';
 import MainMenu from './scenes/MainMenu';
 import howtoplay from './scenes/howtoplay';
 import GameScene2 from './scenes/GameScene2';
+import GameScene3 from './scenes/GameScene3';
+
 
 
 const config = {
@@ -24,7 +26,8 @@ const config = {
         MainMenu,
         howtoplay,
         GameScene,
-        GameScene2
+        GameScene2,
+        GameScene3
        
     ],
     
