@@ -3,6 +3,7 @@ import Phaser from 'phaser';
 import GameScene from './scenes/GameScene';
 import MainMenu from './scenes/MainMenu';
 import howtoplay from './scenes/howtoplay';
+import GameScene2 from './scenes/GameScene2';
 
 
 const config = {
@@ -22,7 +23,8 @@ const config = {
     scene: [
         MainMenu,
         howtoplay,
-        GameScene
+        GameScene,
+        GameScene2
        
     ],
     
