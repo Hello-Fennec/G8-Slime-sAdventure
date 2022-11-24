@@ -3,6 +3,8 @@ import Phaser from "phaser";
 import GameScene from "./scenes/GameScene";
 import GameScene2 from "./scenes/GameScene2";
 import GameScene3 from "./scenes/GameScene3";
+import MainMenu from "./scenes/Mainmenu";
+import Instruction from "./scenes/Instruction";
 const config = {
     // For more settings see <https://github.com/photonstorm/phaser/blob/master/src/boot/Config.js>
     type: Phaser.WEBGL,
@@ -14,10 +16,10 @@ const config = {
     physics: {
         default: "arcade",
         arcade: {
-            debug: true,
+            debug: false,
         },
     },
-    scene: [GameScene, GameScene2, GameScene3],
+    scene: [Instruction, MainMenu, GameScene, GameScene2, GameScene3],
 };
 
 const game = new Phaser.Game(config);
