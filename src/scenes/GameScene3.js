@@ -17,38 +17,22 @@ class GameScene3 extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image(
-            "bg",
-            "src/scenes/image/backgrounds/png/bg02/Layers/Middle_Decor.png"
-        );
-        this.load.image(
-            "sk",
-            "src/scenes/image/backgrounds/png/bg02/Layers/Sky.png"
-        );
-        this.load.image(
-            "gl",
-            "src/scenes/image/backgrounds/png/bg02/Layers/Ground.png"
-        );
-        this.load.image(
-            "fg",
-            "src/scenes/image/backgrounds/png/bg02/Layers/Foreground.png"
-        );
-        this.load.spritesheet(
-            "slime",
-            "src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png",
-            {
-                frameWidth: 80,
-                frameHeight: 54,
-            }
-        );
-        this.load.image("ct", "src/scenes/image/assests/png/Objects/Crate.png");
-        this.load.image(
-            "bullet",
-            "src/scenes/image/assests/png/Tiles/Bone2.png"
-        );
-    }
 
+        this.load.image("bg","src/scenes/image/backgrounds/png/bg02/Layers/Middle_Decor.png");
+        this.load.image("sk","src/scenes/image/backgrounds/png/bg02/Layers/Sky.png");
+        this.load.image("gl", "src/scenes/image/backgrounds/png/bg02/Layers/Ground.png" );
+        this.load.image("fg", "src/scenes/image/backgrounds/png/bg02/Layers/Foreground.png" );
+        this.load.spritesheet( "slime", "src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png",
+           {frameWidth: 80,frameHeight: 54, }
+        );        
+        this.load.image("ct", "src/scenes/image/assests/png/Objects/Crate.png");        
+        this.load.image("bullet","src/scenes/image/assests/png/Tiles/Bone2.png");
+        this.load.image('as','./src/scenes/image/assests/png/Objects/ArrowSign.png')          
+                
+    }
+ 
     create() {
+        
         //prop
         background = this.add
             .image(600, 350, "bg")
@@ -92,13 +76,18 @@ class GameScene3 extends Phaser.Scene {
             callbackScope: this,
             loop: true,
         });
+
         cursors = this.input.keyboard.createCursorKeys();
         slime.setGravityY(2000);
         slime.setBounce(0.1);
         slime.setCollideWorldBounds(true);
-        this.physics.add.collider(slime, bulletGroup, () => {
-            this.scene.start("MainMenu");
+        this.physics.add.collider(slime, ArrowSign, () => {
+            this.scene.start("GameScene4");
         });
+
+        ArrowSign = this.physics.add.image(1210, 685, "as").setDepth(1);
+
+       
     }
 
     update(delta, time) {
