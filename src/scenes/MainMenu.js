@@ -75,13 +75,13 @@ class MainMenu extends Phaser.Scene {
             playButton.setScale(0.17);
         })
 
-        howButton = this.add.image(960,400,'howplay').setScale(0.12).setDepth(0.2);
+        howButton = this.add.image(950,412,'howplay').setScale(0.12).setDepth(0.2);
         howButton.setInteractive();
         howButton.on('pointerup',()=>{
             this.scene.start('howtoplay');
         })
         howButton.on('pointerover',()=>{
-            howButton.setScale(0.2);
+            howButton.setScale(0.15);
         })
         howButton.on('pointerout',()=>{
             howButton.setScale(0.12);
