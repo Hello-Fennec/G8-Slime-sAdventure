@@ -1,5 +1,7 @@
 import Phaser from "phaser";
 let bg;
+let banner1;
+let banner2;
 let Slime;
 let playButton;
 
@@ -14,8 +16,10 @@ class MainMenu extends Phaser.Scene {
 
     preload() {
         this.load.image('bg','./src/scenes/image/Mainmenu/backGround.jpg')
-        this.load.spritesheet('slime','./src/scenes/image/Slimes/slimeMove/Bluemove.png',{frameWidth: 80, frameHeight: 54});
-        this.load.image('play','./src/scenes/image/Mainmenu/playButton.png');
+        this.load.image('banner1','./src/scenes/image/Mainmenu/1.png')
+        this.load.image('banner2','./src/scenes/image/Mainmenu/2.png')
+        this.load.spritesheet('slime','./src/scenes/image/Slimes/slimeMove/Bluemove.png',{frameWidth: 80, frameHeight: 54})
+        
         
 
     }
@@ -23,11 +27,14 @@ class MainMenu extends Phaser.Scene {
     create() {
         //backgrounds
         bg = this.add.image(630, 360, 'bg').setDepth(0.1)
-        
+        banner1 = this.add.image(250,200, 'banner1').setScale(0.3).setDepth(0.2)
+        banner2 = this.add.image(305,290, 'banner2').setScale(0.3).setDepth(0.2)
+
+         
 
         //character
-        Slime = this.physics.add.sprite(150,650,'slime')
-        .setScale(3)
+        Slime = this.physics.add.sprite(300,650,'slime')
+        .setScale(7)
         .setSize(25,20)
         .setOffset(23,15)
         .setDepth(1)
