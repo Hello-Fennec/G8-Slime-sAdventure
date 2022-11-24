@@ -19,35 +19,17 @@ class GameScene2 extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image(
-            "bg",
-            "src/scenes/image/backgrounds/png/bg04/Layers/Middle_Decor.png"
+
+        this.load.image("bg","src/scenes/image/backgrounds/png/bg04/Layers/Middle_Decor.png");
+        this.load.image("sk","src/scenes/image/backgrounds/png/bg04/Layers/Sky.png"); 
+        this.load.image("gl","src/scenes/image/backgrounds/png/bg04/Layers/Ground.png");  
+        this.load.image("fg", "src/scenes/image/backgrounds/png/bg04/Layers/Foreground.png");    
+        this.load.spritesheet("slime","src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png",
+            {frameWidth: 80,frameHeight: 54, }
         );
-        this.load.image(
-            "sk",
-            "src/scenes/image/backgrounds/png/bg04/Layers/Sky.png"
-        );
-        this.load.image(
-            "gl",
-            "src/scenes/image/backgrounds/png/bg04/Layers/Ground.png"
-        );
-        this.load.image(
-            "fg",
-            "src/scenes/image/backgrounds/png/bg04/Layers/Foreground.png"
-        );
-        this.load.spritesheet(
-            "slime",
-            "src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png",
-            {
-                frameWidth: 80,
-                frameHeight: 54,
-            }
-        );
-        this.load.image("ct", "src/scenes/image/assests/png/Objects/Crate.png");
-        this.load.image(
-            "as",
-            "src/scenes/image/assests/png/Objects/ArrowSign.png"
-        );
+        this.load.image("ct","src/scenes/image/assests/png/Objects/Crate.png");    
+        this.load.image("as","src/scenes/image/assests/png/Objects/ArrowSign.png" );           
+       
     }
 
     create() {
@@ -88,6 +70,8 @@ class GameScene2 extends Phaser.Scene {
             .setScale(0.3)
             .setOffset(25, 900);
         sky = this.add.image(650, 350, "sk").setDepth(0.9).setScale(0.7);
+
+        //slime
         slime = this.physics.add
             .sprite(100, 680, "slime")
             .setScale(4)
@@ -103,6 +87,8 @@ class GameScene2 extends Phaser.Scene {
             duration: 700,
             repeat: -1,
         });
+
+
         //moving
         movingcrate = this.physics.add
             .image(300, 550, "ct")
@@ -121,6 +107,7 @@ class GameScene2 extends Phaser.Scene {
         });
         this.physics.add.collider(movingcrate, crate4);
 
+        
         cursors = this.input.keyboard.createCursorKeys();
         slime.setGravityY(2000);
         slime.setBounce(0.1);

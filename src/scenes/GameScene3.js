@@ -44,6 +44,9 @@ class GameScene3 extends Phaser.Scene {
             .setScale(0.7);
         grass = this.add.image(600, 390, "gl").setDepth(0.97).setScale(0.7);
         sky = this.add.image(650, 350, "sk").setDepth(0.9).setScale(0.7);
+        ArrowSign = this.physics.add.image(1210, 685, "as").setDepth(1);
+
+        //slime
         slime = this.physics.add
             .sprite(100, 680, "slime")
             .setScale(4)
@@ -59,6 +62,8 @@ class GameScene3 extends Phaser.Scene {
             duration: 700,
             repeat: -1,
         });
+
+        //trap
         bulletGroup = this.physics.add.group();
         event = this.time.addEvent({
             delay: 2000,
@@ -77,15 +82,18 @@ class GameScene3 extends Phaser.Scene {
             loop: true,
         });
 
+        //move
         cursors = this.input.keyboard.createCursorKeys();
         slime.setGravityY(2000);
         slime.setBounce(0.1);
         slime.setCollideWorldBounds(true);
+        this.physics.add.collider(slime, bulletGroup, () => {
+            this.scene.start("GameScene");
+        });
+
         this.physics.add.collider(slime, ArrowSign, () => {
             this.scene.start("GameScene4");
         });
-
-        ArrowSign = this.physics.add.image(1210, 685, "as").setDepth(1);
 
        
     }
