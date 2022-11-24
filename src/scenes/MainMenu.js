@@ -7,6 +7,7 @@ let Sign;
 let Obj;
 let Slime;
 let playButton;
+let howButton;
 
 
 
@@ -24,7 +25,8 @@ class MainMenu extends Phaser.Scene {
         this.load.image('frame','./src/scenes/image/Mainmenu/11.png')
         this.load.image('banner','/src/scenes/image/Mainmenu/sign.png')
         this.load.image('obj1','./src/scenes/image/assests/png/Objects/Bush1.png')
-        this.load.image('play','./')
+        this.load.image('play','./src/scenes/image/Mainmenu/play.png')
+        this.load.image('howplay','./src/scenes/image/Mainmenu/howplay.png')
         this.load.spritesheet('slime','./src/scenes/image/Slimes/slimeMove/Bluemove.png',{frameWidth: 80, frameHeight: 54})
         
         
@@ -61,16 +63,28 @@ class MainMenu extends Phaser.Scene {
 
 
         //button
-        playButton = this.add.image(900,250,'play').setScale(0.3).setDepth(0.2);
+        playButton = this.add.image(960,318,'play').setScale(0.17).setDepth(0.2);
         playButton.setInteractive();
         playButton.on('pointerup',()=>{
             this.scene.start('GameScene');
         })
         playButton.on('pointerover',()=>{
-            playButton.setScale(0.5);
+            playButton.setScale(0.2);
         })
         playButton.on('pointerout',()=>{
-            playButton.setScale(0.3);
+            playButton.setScale(0.17);
+        })
+
+        howButton = this.add.image(960,400,'howplay').setScale(0.12).setDepth(0.2);
+        howButton.setInteractive();
+        howButton.on('pointerup',()=>{
+            this.scene.start('howtoplay');
+        })
+        howButton.on('pointerover',()=>{
+            howButton.setScale(0.2);
+        })
+        howButton.on('pointerout',()=>{
+            howButton.setScale(0.12);
         })
 
 
