@@ -13,10 +13,10 @@ class DeadScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('Bg','/src/scenes/image/assests/png/bg2.png')
-        this.load.image('restartButton','./src/scenes/image/Mainmenu/restart.png')
-        this.load.image('retryButton','./src/scenes/image/Mainmenu/retry.png')
-        this.load.image('bannersign','./src/scenes/image/Mainmenu/8.png')
+        this.load.image('Bg','src/scenes/image/assests/png/bg2.png')
+        this.load.image('restartButton','src/scenes/image/Mainmenu/restart.png')
+        this.load.image('retryButton','src/scenes/image/Mainmenu/retry.png')
+        this.load.image('bannersign','src/scenes/image/Mainmenu/8.png')
 
     }
 

@@ -12,9 +12,9 @@ class TheEnd extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bgend','./src/scenes/image/Mainmenu/backGround.jpg')
-        this.load.image('textEnd','./src/scenes/image/Mainmenu/congrats.png')
-        this.load.image('playagain','./src/scenes/image/Mainmenu/playAgain.png')
+        this.load.image('bgend','src/scenes/image/Mainmenu/backGround.jpg')
+        this.load.image('textEnd','src/scenes/image/Mainmenu/congrats.png')
+        this.load.image('playagain','src/scenes/image/Mainmenu/playAgain.png')
 
     }
 

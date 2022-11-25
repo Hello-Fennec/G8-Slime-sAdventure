@@ -14,7 +14,7 @@ class GameScene3 extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('Bg02','./src/scenes/image/backgrounds/png/bg02/bgforest02.png')
+        this.load.image('Bg02','src/scenes/image/backgrounds/png/bg02/bgforest02.png')
         this.load.spritesheet(
             "slime",
             "src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png",

@@ -19,15 +19,15 @@ class MainMenu extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bg0','./src/scenes/image/Mainmenu/backGround.jpg')
-        this.load.image('banner1','./src/scenes/image/Mainmenu/1.png')
-        this.load.image('banner2','./src/scenes/image/Mainmenu/2.png')
-        this.load.image('frame','./src/scenes/image/Mainmenu/11.png')
-        this.load.image('banner','./src/scenes/image/Mainmenu/sign.png')
-        this.load.image('obj1','./src/scenes/image/assests/png/Objects/Bush1.png')
-        this.load.image('play','./src/scenes/image/Mainmenu/play.png')
-        this.load.image('howplay','./src/scenes/image/Mainmenu/howplay.png')
-        this.load.spritesheet('slime','./src/scenes/image/Slimes/slimeMove/Bluemove.png',{frameWidth: 80, frameHeight: 54})
+        this.load.image('bg0','src/scenes/image/Mainmenu/backGround.jpg')
+        this.load.image('banner1','src/scenes/image/Mainmenu/1.png')
+        this.load.image('banner2','src/scenes/image/Mainmenu/2.png')
+        this.load.image('frame','src/scenes/image/Mainmenu/11.png')
+        this.load.image('banner','src/scenes/image/Mainmenu/sign.png')
+        this.load.image('obj1','src/scenes/image/assests/png/Objects/Bush1.png')
+        this.load.image('play','src/scenes/image/Mainmenu/play.png')
+        this.load.image('howplay','src/scenes/image/Mainmenu/howplay.png')
+        this.load.spritesheet('slime','src/scenes/image/Slimes/slimeMove/Bluemove.png',{frameWidth: 80, frameHeight: 54})
         
         
 

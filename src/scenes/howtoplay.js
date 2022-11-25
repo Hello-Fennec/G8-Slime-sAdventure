@@ -19,16 +19,16 @@ class howtoplay extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bgHow','./src/scenes/image/Mainmenu/backGround.jpg')
-        this.load.image('signback','./src/scenes/image/assests/png/Objects/ArrowSignLeft.png')
-        this.load.image('back','./src/scenes/image/Mainmenu/back.png')
-        this.load.image('bannerwood','./src/scenes/image/Mainmenu/9.png')
-        this.load.image('left','./src/scenes/image/Mainmenu/left.png')
-        this.load.image('right','./src/scenes/image/Mainmenu/right.png')
-        this.load.image('up','./src/scenes/image/Mainmenu/up.png')
-        this.load.image('tutorialL','./src/scenes/image/Mainmenu/tutorialLeft.png')
-        this.load.image('tutorialR','./src/scenes/image/Mainmenu/tutorialRight.png')
-        this.load.image('tutorialU','./src/scenes/image/Mainmenu/tutorialUp.png')
+        this.load.image('bgHow','src/scenes/image/Mainmenu/backGround.jpg')
+        this.load.image('signback','src/scenes/image/assests/png/Objects/ArrowSignLeft.png')
+        this.load.image('back','src/scenes/image/Mainmenu/back.png')
+        this.load.image('bannerwood','src/scenes/image/Mainmenu/9.png')
+        this.load.image('left','src/scenes/image/Mainmenu/left.png')
+        this.load.image('right','src/scenes/image/Mainmenu/right.png')
+        this.load.image('up','src/scenes/image/Mainmenu/up.png')
+        this.load.image('tutorialL','src/scenes/image/Mainmenu/tutorialLeft.png')
+        this.load.image('tutorialR','src/scenes/image/Mainmenu/tutorialRight.png')
+        this.load.image('tutorialU','src/scenes/image/Mainmenu/tutorialUp.png')
 
         
 
