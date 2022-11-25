@@ -2,10 +2,10 @@ import Phaser from "phaser";
 
 
 
-class Resume extends Phaser.Scene {
+class Pause extends Phaser.Scene {
     constructor(test) {
         super({
-            key: "Resume",
+            key: "Pause",
         });
     }
 
@@ -25,4 +25,4 @@ class Resume extends Phaser.Scene {
 
     }
 }
-export default Resume;
+export default Pause;
