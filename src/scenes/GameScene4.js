@@ -16,6 +16,7 @@ class GameScene4 extends Phaser.Scene {
          ); 
         this.load.image("arrow","src/scenes/image/assests/png/Objects/ArrowSign.png" );      
         this.load.image("stoneblock","src/scenes/image/assests/png/Tiles/stone.png");
+        this.load.image("bg","")
 
     }
 
