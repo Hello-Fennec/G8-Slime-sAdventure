@@ -153,18 +153,6 @@ class GameScene extends Phaser.Scene {
         platform6.setCollideWorldBounds(true);
         platform6.setImmovable();
 
-        //Pause
-        pause = this.add.image(80,80,'pause').setScale(0.1).setDepth(2);
-        pause.setInteractive();
-        pause.on('pointerup',()=>{
-            this.scene.start('Resume');    
-        })
-        pause.on('pointerover',()=>{
-            pause.setScale(0.1); 
-        })
-        pause.on('pointerout',()=>{
-            pause.setScale(0.1);
-        })
 
         //Key
     }
