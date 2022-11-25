@@ -24,11 +24,11 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            debug: true
+            debug: false
         }
     },
     scene: [
-        MainMenu,
+        /*MainMenu,
         DeadScene,
         DeadScene1,
         DeadScene2,
@@ -36,7 +36,7 @@ const config = {
         GameScene,        
         GameScene2,        
         GameScene3,        
-        GameScene4,
+        GameScene4,*/
         TheEnd
        
     ],

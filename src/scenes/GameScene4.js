@@ -197,6 +197,7 @@ class GameScene4 extends Phaser.Scene {
         slime.setGravityY(2000);
         slime.setBounce(0.1);
         slime.setCollideWorldBounds(true);
+        
         //bird
         birdGroup = this.physics.add.group();
         this.physics.add.collider(slime, spike, () => {

@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+let background;
 
 
 class TheEnd extends Phaser.Scene {
@@ -9,11 +10,13 @@ class TheEnd extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.image('bg','src/scenes/image/Mainmenu/backGround.jpg')
+        this.load.image('textEnd','')
 
     }
 
     create() {
+        background = this.add.image(630, 360, 'bg').setDepth(0.1)
 
     }
 
