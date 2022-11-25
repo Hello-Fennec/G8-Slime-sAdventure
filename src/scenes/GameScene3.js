@@ -92,7 +92,7 @@ class GameScene3 extends Phaser.Scene {
         
         //restart
         this.physics.add.collider(slime, bulletGroup, () => {
-            this.scene.start("GameScene");
+            this.scene.start("DeadScene");
         });
 
         //next level
