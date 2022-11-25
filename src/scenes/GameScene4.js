@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 let slimeblue;
+let arrowSign;
 
 class GameScene4 extends Phaser.Scene {
     constructor(test) {
@@ -10,8 +11,9 @@ class GameScene4 extends Phaser.Scene {
 
     preload() {
         this.load.spritesheet( "slime", "src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png",
-        {frameWidth: 80,frameHeight: 54, }
-     );      
+            {frameWidth: 80,frameHeight: 54, }        
+         ); 
+        this.load.image("arrow","src/scenes/image/assests/png/Objects/ArrowSign.png" );      
 
     }
 
@@ -42,9 +44,20 @@ class GameScene4 extends Phaser.Scene {
         //moving
         cursors = this.input.keyboard.createCursorKeys();
 
-        /*this.physics.add.collider(slimeblue, ArrowSign, () => {
-            this.scene.start("GameScene2");
-        });*/
+        //object
+        //arrowSign = this.add.image()
+
+
+        cursors = this.input.keyboard.createCursorKeys();
+        slime.setGravityY(2000);
+        slime.setBounce(0.1);
+        slime.setCollideWorldBounds(true);
+        this.physics.add.collider(slime, ArrowSign, () => {
+            this.scene.start("GameScene4");
+        });
+        this.physics.add.collider(slimeblue, ArrowSign, () => {
+            this.scene.start("TheEnd");
+        });
 
       
     }
