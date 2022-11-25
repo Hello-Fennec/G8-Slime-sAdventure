@@ -197,7 +197,7 @@ class GameScene4 extends Phaser.Scene {
         slime.setGravityY(2000);
         slime.setBounce(0.1);
         slime.setCollideWorldBounds(true);
-        
+
         //bird
         birdGroup = this.physics.add.group();
         this.physics.add.collider(slime, spike, () => {
@@ -239,14 +239,14 @@ class GameScene4 extends Phaser.Scene {
         this.physics.add.collider(slime, crate3);
         crate3.setImmovable();
         this.physics.add.collider(slime, ArrowSign, () => {
-            this.scene.start("MainMenu");
+            this.scene.start("TheEnd");
         });
         event = this.time.addEvent({
             delay: 1500,
             callback: function () {
                 bird = this.physics.add.image(
                     1300,
-                    Math.floor(Math.random() * 900) - 300,
+                    Math.floor(Math.random() * 700) - 300,
                     "bird"
                 );
                 bird.setScale(0.25);
