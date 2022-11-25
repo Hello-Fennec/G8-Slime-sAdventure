@@ -129,7 +129,7 @@ class GameScene2 extends Phaser.Scene {
         this.physics.add.collider(slime, crate3);
         this.physics.add.collider(slime, crate4);
         this.physics.add.collider(slime, grass, () => {
-            this.scene.start("MainMenu");
+            this.scene.start("DeadScene");
         });
         this.physics.add.collider(slime, sign, () => {
             this.scene.start("GameScene3");
