@@ -79,6 +79,7 @@ class GameScene4 extends Phaser.Scene {
     }
 
     create() {
+        this.cameras.main.fadeIn(500);
         //prop
         ArrowSign = this.physics.add.image(1210, 650, "as").setDepth(0.94);
         background = this.add

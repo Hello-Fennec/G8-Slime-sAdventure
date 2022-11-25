@@ -31,6 +31,7 @@ class GameScene3 extends Phaser.Scene {
     }
 
     create() {
+        this.cameras.main.fadeIn(500);
         //prop
         background = this.add
             .image(600, 350, 'Bg02')

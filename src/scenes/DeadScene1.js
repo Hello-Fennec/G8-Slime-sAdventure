@@ -21,6 +21,7 @@ class DeadScene1 extends Phaser.Scene {
     }
 
     create() {
+        this.cameras.main.fadeIn(500);
 
         Background = this.add.image(630,360,'Bg').setDepth(0.8)
 

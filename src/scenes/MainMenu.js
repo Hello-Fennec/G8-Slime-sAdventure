@@ -34,6 +34,9 @@ class MainMenu extends Phaser.Scene {
     }
 
     create() {
+
+        this.cameras.main.fadeIn(500);
+        
         //backgrounds
         bg = this.add.image(630, 360, 'bg0').setDepth(0.1)
         banner1 = this.add.image(250,200, 'banner1').setScale(0.3).setDepth(0.2)

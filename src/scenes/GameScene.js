@@ -44,6 +44,7 @@ class GameScene extends Phaser.Scene {
     }
 
     create() {
+        this.cameras.main.fadeIn(500);
 
         //Prop
         background = this.add

@@ -22,6 +22,7 @@ class DeadScene extends Phaser.Scene {
 
     create() {
 
+        this.cameras.main.fadeIn(500);
         Background = this.add.image(630,360,'Bg').setDepth(0.8)
 
         BannerSign = this.physics.add.staticGroup();
