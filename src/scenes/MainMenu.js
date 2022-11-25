@@ -19,7 +19,7 @@ class MainMenu extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bg','./src/scenes/image/Mainmenu/backGround.jpg')
+        this.load.image('bg0','./src/scenes/image/Mainmenu/backGround.jpg')
         this.load.image('banner1','./src/scenes/image/Mainmenu/1.png')
         this.load.image('banner2','./src/scenes/image/Mainmenu/2.png')
         this.load.image('frame','./src/scenes/image/Mainmenu/11.png')
@@ -35,7 +35,7 @@ class MainMenu extends Phaser.Scene {
 
     create() {
         //backgrounds
-        bg = this.add.image(630, 360, 'bg').setDepth(0.1)
+        bg = this.add.image(630, 360, 'bg0').setDepth(0.1)
         banner1 = this.add.image(250,200, 'banner1').setScale(0.3).setDepth(0.2)
         banner2 = this.add.image(305,290, 'banner2').setScale(0.3).setDepth(0.2)
         Frame = this.add.image(305, 250, 'frame').setScale(0.29).setDepth(0.15)

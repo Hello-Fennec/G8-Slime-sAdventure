@@ -18,7 +18,7 @@ class GameScene3 extends Phaser.Scene {
 
     preload() {
 
-        this.load.image("bg","src/scenes/image/backgrounds/png/bg02/Layers/Middle_Decor.png");
+        this.load.image("bg3","src/scenes/image/backgrounds/png/bg02/Layers/Middle_Decor.png");
         this.load.image("sk","src/scenes/image/backgrounds/png/bg02/Layers/Sky.png");
         this.load.image("gl", "src/scenes/image/backgrounds/png/bg02/Layers/Ground.png" );
         this.load.image("fg", "src/scenes/image/backgrounds/png/bg02/Layers/Foreground.png" );
@@ -36,11 +36,11 @@ class GameScene3 extends Phaser.Scene {
         this.cameras.main.fadeIn(500);
 
         //prop
-        background = this.add
-            .image(600, 350, "bg")
+        backGround = this.add
+            .image(600, 350, "bg3")
             .setDepth(0.91)
             .setScale(0.7);
-        background = this.add
+        foreground = this.add
             .image(600, 350, "fg")
             .setDepth(0.92)
             .setScale(0.7);
