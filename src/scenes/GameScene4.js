@@ -1,7 +1,5 @@
 import Phaser from "phaser";
-let background1;
 let slimeblue;
-let platform;
 
 class GameScene4 extends Phaser.Scene {
     constructor(test) {
@@ -11,25 +9,14 @@ class GameScene4 extends Phaser.Scene {
     }
 
     preload() {
-       this.load.image('bg','./src/scenes/image/backgrounds/png/bg04/bgforest04.png')
-       this.load.spritesheet('slime','src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png',    
-            {frameWidth: 80,frameHeight: 54, }
-        );
-        this.load.image('pf','./src/scenes/image/assests/png/Tiles/Tile2.png')
+        this.load.spritesheet( "slime", "src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png",
+        {frameWidth: 80,frameHeight: 54, }
+     );      
 
     }
 
     create() {
 
-       this.cameras.main.fadeIn(500);
-
-       //background
-       background1 = this.add.image(650, 300, 'bg').setDepth(0.8).setScale(0.8);
-
-       //platform
-       platform = this.add.image(60,650, 'pf').setDepth(0.9).setScale(1);
-        
-    
 
        //slime
        slimeblue = this.physics.add
@@ -48,6 +35,10 @@ class GameScene4 extends Phaser.Scene {
             repeat: -1,
         });
 
+        slimeblue.setGravityY(2000);
+        slimeblue.setBounce(0.1);
+        slimeblue.setCollideWorldBounds(true);
+
         //moving
         cursors = this.input.keyboard.createCursorKeys();
 
@@ -59,18 +50,18 @@ class GameScene4 extends Phaser.Scene {
     }
 
     update(delta, time) {
-        slime.anims.play('slimeAni', true);
+        slimeblue.anims.play('slimeAni', true);
 
         if (cursors.left.isDown) {
-            slime.setVelocityX(-160);
+            slimeblue.setVelocityX(-160);
         } else if (cursors.right.isDown) {
-            slime.setVelocityX(160);
+            slimeblue.setVelocityX(160);
         } else {
-            slime.setVelocityX(0);
+            slimeblue.setVelocityX(0);
         }
-        slime.anims.play('slimeAni', true);
+        slimeblue.anims.play('slimeAni', true);
         if (cursors.up.isDown) {
-            slime.setVelocityY(-330);
+            slimeblue.setVelocityY(-330);
         }
     }
 }
