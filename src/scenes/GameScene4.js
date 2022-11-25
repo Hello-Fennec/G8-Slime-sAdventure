@@ -200,31 +200,31 @@ class GameScene4 extends Phaser.Scene {
         //bird
         birdGroup = this.physics.add.group();
         this.physics.add.collider(slime, spike, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
         this.physics.add.collider(slime, spike2, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
         this.physics.add.collider(slime, spike3, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
         this.physics.add.collider(slime, spike4, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
         this.physics.add.collider(slime, spike5, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
         this.physics.add.collider(slime, spike6, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
         this.physics.add.collider(slime, spikeDown, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
         this.physics.add.collider(slime, spikeDown2, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
         this.physics.add.collider(slime, spikeDown3, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
 
         //crate collide
