@@ -57,7 +57,7 @@ class GameScene3 extends Phaser.Scene {
         //bullet
         bulletGroup = this.physics.add.group();
         event = this.time.addEvent({
-            delay: 2000,
+            delay: 1000,
             callback: function () {
                 bullet = this.physics.add.image(
                     Math.floor(Math.random() * 1000) + 101,
@@ -74,7 +74,7 @@ class GameScene3 extends Phaser.Scene {
         });
 
         //arrow for next Scene
-        ArrowSign = this.physics.add.image(1210, 655, "as").setDepth(0.94);
+        ArrowSign = this.physics.add.image(1210, 680, "as").setDepth(0.94);
 
         //moving
         cursors = this.input.keyboard.createCursorKeys();
