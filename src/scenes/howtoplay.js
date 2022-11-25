@@ -6,6 +6,9 @@ let BackButton;
 let Left;
 let Right;
 let Up;
+let tutorialLeft;
+let tutorialRight;
+let tutorialUp
 
 
 class howtoplay extends Phaser.Scene {
@@ -23,11 +26,18 @@ class howtoplay extends Phaser.Scene {
         this.load.image('left','./src/scenes/image/Mainmenu/left.png')
         this.load.image('right','./src/scenes/image/Mainmenu/right.png')
         this.load.image('up','./src/scenes/image/Mainmenu/up.png')
+        this.load.image('tutorialL','./src/scenes/image/Mainmenu/tutorialLeft.png')
+        this.load.image('tutorialR','./src/scenes/image/Mainmenu/tutorialRight.png')
+        this.load.image('tutorialU','./src/scenes/image/Mainmenu/tutorialUp.png')
+
         
 
     }
 
     create() {
+
+        this.cameras.main.fadeIn(500);
+
         BackgroundHow = this.add.image(630,360, 'bgHow').setDepth(0.1)
         SignBack = this.add.image(150,600, 'signback').setScale(2.5).setDepth(0.12)
 
@@ -41,7 +51,11 @@ class howtoplay extends Phaser.Scene {
         Right =  this.add.image(630,130, 'right').setScale(0.1).setDepth(0.13)
         Up =  this.add.image(1010,130, 'up').setScale(0.09).setDepth(0.13)
 
-        this.cameras.main.fadeIn(500);
+        tutorialLeft = this.add.image(250,200, 'tutorialL').setScale(0.3).setDepth(0.13)
+        tutorialRight = this.add.image(630,200, 'tutorialR').setScale(0.3).setDepth(0.13)
+        tutorialUp = this.add.image(1010,200, 'tutorialU').setScale(0.3).setDepth(0.13)
+
+       
 
         
         //button
