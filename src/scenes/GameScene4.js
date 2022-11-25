@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-let background;
+let background1;
 let slimeblue;
 let platform;
 
@@ -21,10 +21,10 @@ class GameScene4 extends Phaser.Scene {
 
     create() {
 
-        this.cameras.main.fadeIn(500);
+       this.cameras.main.fadeIn(500);
 
        //background
-       background = this.add.image(650, 300, 'bg').setDepth(0.8).setScale(0.8);
+       background1 = this.add.image(650, 300, 'bg').setDepth(0.8).setScale(0.8);
 
        //platform
        platform = this.add.image(60,650, 'pf').setDepth(0.9).setScale(1);
@@ -51,9 +51,9 @@ class GameScene4 extends Phaser.Scene {
         //moving
         cursors = this.input.keyboard.createCursorKeys();
 
-        this.physics.add.collider(slimeblue, ArrowSign, () => {
+        /*this.physics.add.collider(slimeblue, ArrowSign, () => {
             this.scene.start("GameScene2");
-        });
+        });*/
 
       
     }

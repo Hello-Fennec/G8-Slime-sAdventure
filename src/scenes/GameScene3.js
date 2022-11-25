@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-let background;
+let backGround;
 let foreground;
 let sky;
 let slime;
@@ -34,7 +34,7 @@ class GameScene3 extends Phaser.Scene {
     create() {
         
         this.cameras.main.fadeIn(500);
-        
+
         //prop
         background = this.add
             .image(600, 350, "bg")
