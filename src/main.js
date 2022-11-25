@@ -27,13 +27,13 @@ const config = {
         }
     },
     scene: [
-        MainMenu,
-        DeadScene,
-        DeadScene1,
-        howtoplay,
-        GameScene,        
-        GameScene2,        
-        GameScene3,        
+        //MainMenu,
+        //DeadScene,
+        //DeadScene1,
+        //howtoplay,
+        //GameScene,        
+        //GameScene2,        
+        //GameScene3,        
         GameScene4,
         TheEnd
        

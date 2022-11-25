@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 let slimeblue;
 let arrowSign;
+let blockStone;
 
 class GameScene4 extends Phaser.Scene {
     constructor(test) {
@@ -14,12 +15,19 @@ class GameScene4 extends Phaser.Scene {
             {frameWidth: 80,frameHeight: 54, }        
          ); 
         this.load.image("arrow","src/scenes/image/assests/png/Objects/ArrowSign.png" );      
+        this.load.image("stoneblock","src/scenes/image/assests/png/Tiles/stone.png");
 
     }
 
     create() {
 
+        this.cameras.main.fadeIn(500);
 
+        blockStone = this.physics.add.staticGroup();
+        blockStone.create(56, 670, 'stoneblock').setScale(0.1).setDepth(0.5)
+        blockStone.create(165, 670, 'stoneblock').setScale(0.1).setDepth(0.5)
+        
+    
        //slime
        slimeblue = this.physics.add
             .sprite(100, 680, 'slime')
