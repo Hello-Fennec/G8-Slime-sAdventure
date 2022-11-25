@@ -37,10 +37,7 @@ class GameScene4 extends Phaser.Scene {
             repeat: -1,
         });
 
-        slimeblue.setGravityY(2000);
-        slimeblue.setBounce(0.1);
-        slimeblue.setCollideWorldBounds(true);
-
+        
         //moving
         cursors = this.input.keyboard.createCursorKeys();
 
@@ -52,10 +49,10 @@ class GameScene4 extends Phaser.Scene {
         slime.setGravityY(2000);
         slime.setBounce(0.1);
         slime.setCollideWorldBounds(true);
-        this.physics.add.collider(slime, ArrowSign, () => {
+        this.physics.add.collider(slime, arrowSign, () => {
             this.scene.start("GameScene4");
         });
-        this.physics.add.collider(slimeblue, ArrowSign, () => {
+        this.physics.add.collider(slimeblue, arrowSign, () => {
             this.scene.start("TheEnd");
         });
 
