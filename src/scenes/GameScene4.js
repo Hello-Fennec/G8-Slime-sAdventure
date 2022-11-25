@@ -259,7 +259,7 @@ class GameScene4 extends Phaser.Scene {
             loop: true,
         });
         this.physics.add.collider(slime, birdGroup, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene2");
         });
     }
 

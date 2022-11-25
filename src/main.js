@@ -8,6 +8,7 @@ import GameScene3 from './scenes/GameScene3';
 import GameScene4 from './scenes/GameScene4';
 import DeadScene from './scenes/DeadScene';
 import DeadScene1 from './scenes/DeadScene1';
+import DeadScene2 from './scenes/DeadScene2';
 import TheEnd from './scenes/TheEnd';
 
 
@@ -30,6 +31,7 @@ const config = {
         //MainMenu,
         //DeadScene,
         //DeadScene1,
+        DeadScene2,
         //howtoplay,
         //GameScene,        
         //GameScene2,        
