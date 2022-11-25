@@ -5,6 +5,7 @@ import GameScene2 from "./scenes/GameScene2";
 import GameScene3 from "./scenes/GameScene3";
 import MainMenu from "./scenes/Mainmenu";
 import Instruction from "./scenes/Instruction";
+import DeadScene from "./scenes/DeadScene";
 const config = {
     // For more settings see <https://github.com/photonstorm/phaser/blob/master/src/boot/Config.js>
     type: Phaser.WEBGL,
@@ -19,7 +20,14 @@ const config = {
             debug: false,
         },
     },
-    scene: [Instruction, MainMenu, GameScene, GameScene2, GameScene3],
+    scene: [
+        MainMenu,
+        DeadScene,
+        Instruction,
+        GameScene,
+        GameScene2,
+        GameScene3,
+    ],
 };
 
 const game = new Phaser.Game(config);
