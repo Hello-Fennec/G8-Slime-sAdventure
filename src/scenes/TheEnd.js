@@ -25,16 +25,16 @@ class TheEnd extends Phaser.Scene {
         background = this.add.image(630, 360, 'bgend').setDepth(0.1)
         textend = this.add.image(630, 250, 'textEnd').setScale(0.5).setDepth(0.3)
 
-        playbutton = this.add.image(630,500, 'playagain').setScale(0.4).setDepth(0.3);
+        playbutton = this.add.image(630,500, 'playagain').setScale(0.3).setDepth(0.3);
         playbutton.setInteractive();
         playbutton.on('pointerup',()=>{
             this.scene.start('MainMenu');
         })
         playbutton.on('pointerover',()=>{
-            playbutton.setScale(0.6);
+            playbutton.setScale(0.4);
         })
         playbutton.on('pointerout',()=>{
-            playbutton.setScale(0.4);
+            playbutton.setScale(0.3);
         })
 
     
