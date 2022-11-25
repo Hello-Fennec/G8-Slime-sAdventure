@@ -98,9 +98,9 @@ class GameScene extends Phaser.Scene {
         sky = this.add.image(300, 250, "sky").setDepth(0.8);
 
         //key
-        keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
+        /*keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
         keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-        keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+        keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);*/
 
         //SLime
         slime = this.physics.add
@@ -163,7 +163,7 @@ class GameScene extends Phaser.Scene {
         // } else {
         //     slime.setVelocityY(0).setVelocityX(0);
         // }
-        
+
         if (cursors.left.isDown) {
             slime.setVelocityX(-160);
         } else if (cursors.right.isDown) {
@@ -175,6 +175,7 @@ class GameScene extends Phaser.Scene {
         if (cursors.up.isDown) {
             slime.setVelocityY(-330);
         }
+
     }
 }
 export default GameScene;

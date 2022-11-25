@@ -24,11 +24,11 @@ const config = {
         }
     },
     scene: [
-        //MainMenu,
-        //howtoplay,
-        //GameScene,
-       // GameScene2,
-        //GameScene3,
+        MainMenu,
+        howtoplay,
+        GameScene,
+        GameScene2,
+        GameScene3,
         GameScene4
        
     ],
