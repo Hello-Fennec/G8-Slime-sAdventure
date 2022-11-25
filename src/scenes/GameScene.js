@@ -154,10 +154,10 @@ class GameScene extends Phaser.Scene {
         platform6.setImmovable();
 
         //resume
-        resume = this.add.image(60,120,'resume').setScale(0.1).setDepth(2);
+        resume = this.add.image(80,80,'resume').setScale(0.1).setDepth(2);
         resume.setInteractive();
         resume.on('pointerup',()=>{
-            this.scene.resume('GameScene');
+            this.scene.resume('Resume');
             this.scene.stop();     
         })
         resume.on('pointerover',()=>{
