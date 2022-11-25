@@ -20,7 +20,9 @@ class howtoplay extends Phaser.Scene {
         this.load.image('signback','./src/scenes/image/assests/png/Objects/ArrowSignLeft.png')
         this.load.image('back','./src/scenes/image/Mainmenu/back.png')
         this.load.image('bannerwood','./src/scenes/image/Mainmenu/9.png')
-        this.load.image()
+        this.load.image('left','./src/scenes/image/Mainmenu/left.png')
+        this.load.image('right','./src/scenes/image/Mainmenu/right.png')
+        this.load.image('up','./src/scenes/image/Mainmenu/up.png')
         
 
     }
@@ -29,7 +31,14 @@ class howtoplay extends Phaser.Scene {
         BackgroundHow = this.add.image(630,360, 'bgHow').setDepth(0.1)
         SignBack = this.add.image(150,600, 'signback').setScale(2.5).setDepth(0.12)
 
+        Woodbanner = this.phy
         Woodbanner = this.add.image(250,120, 'bannerwood').setScale(0.2).setDepth(0.12)
+        Left = this.add.image(180,130, 'left').setScale(0.1).setDepth(0.13)
+        Right =  this.add.image(180,150, 'right').setScale(0.1).setDepth(0.13)
+        Up =  this.add.image(180,170, 'up').setScale(0.1).setDepth(0.13)
+
+        this.cameras.main.fadeIn(500);
+
         
         //button
         BackButton = this.add.image(170,570,'back').setScale(0.18).setDepth(0.13);
@@ -43,6 +52,8 @@ class howtoplay extends Phaser.Scene {
         BackButton.on('pointerout',()=>{
             BackButton.setScale(0.18);
         })
+
+    
     }
 
     update(delta, time) {

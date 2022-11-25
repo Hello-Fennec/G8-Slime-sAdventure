@@ -33,6 +33,9 @@ class GameScene2 extends Phaser.Scene {
     }
 
     create() {
+
+        this.cameras.main.fadeIn(500);
+        
         //prop
         crate = this.physics.add
             .image(200, 670, "ct")
@@ -118,9 +121,11 @@ class GameScene2 extends Phaser.Scene {
         this.physics.add.collider(slime, grass, () => {
             this.scene.start("MainMenu");
         });
+
         this.physics.add.collider(slime, sign, () => {
             this.scene.start("GameScene3");
         });
+
         this.physics.add.collider(movingcrate, slime);
         slime.setCollideWorldBounds(true);
         crate.setCollideWorldBounds(true);

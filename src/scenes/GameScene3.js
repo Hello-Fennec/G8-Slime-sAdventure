@@ -33,6 +33,8 @@ class GameScene3 extends Phaser.Scene {
  
     create() {
         
+        this.cameras.main.fadeIn(500);
+        
         //prop
         background = this.add
             .image(600, 350, "bg")
@@ -84,15 +86,16 @@ class GameScene3 extends Phaser.Scene {
 
         //move
         cursors = this.input.keyboard.createCursorKeys();
-        
         slime.setGravityY(2000);
         slime.setBounce(0.1);
         slime.setCollideWorldBounds(true);
+        
+        //restart
         this.physics.add.collider(slime, bulletGroup, () => {
             this.scene.start("GameScene");
         });
 
-
+        //next level
         this.physics.add.collider(slime, ArrowSign, () => {
             this.scene.start("GameScene4");
         });

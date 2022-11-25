@@ -20,6 +20,9 @@ class GameScene4 extends Phaser.Scene {
     }
 
     create() {
+
+        this.cameras.main.fadeIn(500);
+
        //background
        background = this.add.image(650, 300, 'bg').setDepth(0.8).setScale(0.8);
 
@@ -48,8 +51,10 @@ class GameScene4 extends Phaser.Scene {
         //moving
         cursors = this.input.keyboard.createCursorKeys();
 
-      
-      
+        this.physics.add.collider(slimeblue, ArrowSign, () => {
+            this.scene.start("GameScene2");
+        });
+
       
     }
 
