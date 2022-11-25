@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 let background;
-let slime;
+let slimeblue;
 let platform;
 
 class GameScene4 extends Phaser.Scene {
@@ -16,6 +16,7 @@ class GameScene4 extends Phaser.Scene {
             {frameWidth: 80,frameHeight: 54, }
         );
         this.load.image('pf','./src/scenes/image/assests/png/Tiles/Tile2.png')
+
     }
 
     create() {
@@ -28,7 +29,7 @@ class GameScene4 extends Phaser.Scene {
     
 
        //slime
-       slime = this.physics.add
+       slimeblue = this.physics.add
             .sprite(100, 680, 'slime')
             .setScale(4)
             .setDepth(0.96)
@@ -45,9 +46,7 @@ class GameScene4 extends Phaser.Scene {
         });
 
         //moving
-        keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
-        keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-        keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+        cursors = this.input.keyboard.createCursorKeys();
 
       
       

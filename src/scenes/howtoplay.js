@@ -20,7 +20,7 @@ class howtoplay extends Phaser.Scene {
         this.load.image('signback','./src/scenes/image/assests/png/Objects/ArrowSignLeft.png')
         this.load.image('back','./src/scenes/image/Mainmenu/back.png')
         this.load.image('bannerwood','./src/scenes/image/Mainmenu/9.png')
-        //this.load.image()
+        this.load.image()
         
 
     }

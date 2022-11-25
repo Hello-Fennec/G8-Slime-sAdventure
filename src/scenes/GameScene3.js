@@ -66,7 +66,7 @@ class GameScene3 extends Phaser.Scene {
         //trap
         bulletGroup = this.physics.add.group();
         event = this.time.addEvent({
-            delay: 2000,
+            delay: 1000,
             callback: function () {
                 bullet = this.physics.add.image(
                     Math.floor(Math.random() * 1000) + 101,
@@ -84,12 +84,14 @@ class GameScene3 extends Phaser.Scene {
 
         //move
         cursors = this.input.keyboard.createCursorKeys();
+        
         slime.setGravityY(2000);
         slime.setBounce(0.1);
         slime.setCollideWorldBounds(true);
         this.physics.add.collider(slime, bulletGroup, () => {
             this.scene.start("GameScene");
         });
+
 
         this.physics.add.collider(slime, ArrowSign, () => {
             this.scene.start("GameScene4");
@@ -106,6 +108,7 @@ class GameScene3 extends Phaser.Scene {
         } else {
             slime.setVelocityX(0);
         }
+
         slime.anims.play("slimeAni", true);
         for (let i = 0; i < bulletGroup.getChildren().length; i++) {
             if (bulletGroup.getChildren()[i].y > 700) {
