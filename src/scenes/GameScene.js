@@ -130,7 +130,7 @@ class GameScene extends Phaser.Scene {
         this.physics.add.collider(slime, ArrowSign, () => {
             this.scene.start("GameScene2");
         });
-        
+
         //Gravity slime
         slime.setGravityY(2000);
         slime.setBounce(0.1);
@@ -163,6 +163,7 @@ class GameScene extends Phaser.Scene {
         // } else {
         //     slime.setVelocityY(0).setVelocityX(0);
         // }
+        
         if (cursors.left.isDown) {
             slime.setVelocityX(-160);
         } else if (cursors.right.isDown) {
