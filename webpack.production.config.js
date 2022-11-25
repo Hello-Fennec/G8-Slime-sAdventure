@@ -57,7 +57,7 @@ module.exports = {
       hash: true
     }),
     new CopyWebpackPlugin([
-             
+            { from: './src/scenes/image', to: './src/scenes/image'}
           
         ])
   ],
