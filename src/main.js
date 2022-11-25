@@ -10,6 +10,7 @@ import DeadScene from './scenes/DeadScene';
 import DeadScene1 from './scenes/DeadScene1';
 import DeadScene2 from './scenes/DeadScene2';
 import TheEnd from './scenes/TheEnd';
+import Resume from './scenes/Resume';
 
 
 
@@ -29,6 +30,7 @@ const config = {
     },
     scene: [
         MainMenu,
+        Resume,
         DeadScene,
         DeadScene1,
         DeadScene2,

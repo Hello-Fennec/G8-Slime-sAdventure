@@ -19,6 +19,7 @@ let platform6;
 
 let cursors;
 let ArrowSign;
+let resume;
 class GameScene extends Phaser.Scene {
     constructor(test) {
         super({
@@ -39,7 +40,8 @@ class GameScene extends Phaser.Scene {
         this.load.image("as", "src/scenes/image/assests/png/Objects/ArrowSign.png" );   
         this.load.image("pf", "src/scenes/image/assests/png/Tiles/Tile16.png");   
         this.load.image("pfm", "src/scenes/image/assests/png/Tiles/Tile15.png");
-        this.load.image("pfr", "src/scenes/image/assests/png/Tiles/Tile14.png");       
+        this.load.image("pfr", "src/scenes/image/assests/png/Tiles/Tile14.png");      
+        this.load.image("resume", "src/scenes/image/Mainmenu/resume.png") 
              
     }
 
@@ -150,6 +152,20 @@ class GameScene extends Phaser.Scene {
         platform5.setImmovable();
         platform6.setCollideWorldBounds(true);
         platform6.setImmovable();
+
+        //resume
+        resume = this.add.image(60,120,'resume').setScale(0.1).setDepth(2);
+        resume.setInteractive();
+        resume.on('pointerup',()=>{
+            this.scene.resume('GameScene');
+            this.scene.stop();     
+        })
+        resume.on('pointerover',()=>{
+            resume.setScale(0.1); 
+        })
+        resume.on('pointerout',()=>{
+            resume.setScale(0.1);
+        })
 
         //Key
     }
