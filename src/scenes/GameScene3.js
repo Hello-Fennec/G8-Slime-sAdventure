@@ -41,6 +41,10 @@ class GameScene3 extends Phaser.Scene {
                 frameHeight: 54,
             }
         );
+        this.load.image(
+            "as",
+            "src/scenes/image/assests/png/Objects/ArrowSign.png"
+        );
         this.load.image("ct", "src/scenes/image/assests/png/Objects/Crate.png");
         this.load.image(
             "bullet",
@@ -50,6 +54,7 @@ class GameScene3 extends Phaser.Scene {
 
     create() {
         //prop
+        ArrowSign = this.physics.add.image(1210, 650, "as").setDepth(0.94);
         background = this.add
             .image(600, 350, "bg")
             .setDepth(0.91)
@@ -98,6 +103,9 @@ class GameScene3 extends Phaser.Scene {
         slime.setCollideWorldBounds(true);
         this.physics.add.collider(slime, bulletGroup, () => {
             this.scene.start("DeadScene");
+        });
+        this.physics.add.collider(slime, ArrowSign, () => {
+            this.scene.start("GameScene4");
         });
     }
 
