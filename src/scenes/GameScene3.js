@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 let backGround;
 let foreground;
-let sky;
+let sky1;
 let slime;
 let grass;
 let cursors;
@@ -19,7 +19,7 @@ class GameScene3 extends Phaser.Scene {
     preload() {
 
         this.load.image("bg3","src/scenes/image/backgrounds/png/bg02/Layers/Middle_Decor.png");
-        this.load.image("sk","src/scenes/image/backgrounds/png/bg02/Layers/Sky.png");
+        this.load.image("sk1","src/scenes/image/backgrounds/png/bg02/Layers/Sky.png");
         this.load.image("gl", "src/scenes/image/backgrounds/png/bg02/Layers/Ground.png" );
         this.load.image("fg", "src/scenes/image/backgrounds/png/bg02/Layers/Foreground.png" );
         this.load.spritesheet( "slime", "src/scenes/image/Slimes/slimeIdle2/SlimeBlue2.png",
@@ -45,7 +45,7 @@ class GameScene3 extends Phaser.Scene {
             .setDepth(0.92)
             .setScale(0.7);
         grass = this.add.image(600, 390, "gl").setDepth(0.97).setScale(0.7);
-        sky = this.add.image(650, 350, "sk").setDepth(0.9).setScale(0.7);
+        sky1 = this.add.image(650, 350, "sk1").setDepth(0.9).setScale(0.7);
         ArrowSign1 = this.physics.add.image(1210, 685, "as1").setDepth(1);
 
         //slime
