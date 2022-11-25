@@ -7,6 +7,7 @@ import GameScene2 from './scenes/GameScene2';
 import GameScene3 from './scenes/GameScene3';
 import GameScene4 from './scenes/GameScene4';
 import DeadScene from './scenes/DeadScene';
+import DeadScene1 from './scenes/DeadScene1';
 
 
 
@@ -27,6 +28,7 @@ const config = {
     scene: [
         MainMenu,
         DeadScene,
+        DeadScene1,
         howtoplay,
         GameScene,        
         GameScene2,        

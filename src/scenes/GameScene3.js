@@ -8,7 +8,7 @@ let cursors;
 let event;
 let bullet;
 let bulletGroup;
-let ArrowSign;
+let ArrowSign1;
 class GameScene3 extends Phaser.Scene {
     constructor(test) {
         super({
@@ -27,7 +27,7 @@ class GameScene3 extends Phaser.Scene {
         );        
         this.load.image("ct", "src/scenes/image/assests/png/Objects/Crate.png");        
         this.load.image("bullet","src/scenes/image/assests/png/Tiles/Bone2.png");
-        this.load.image('as','./src/scenes/image/assests/png/Objects/ArrowSign.png')          
+        this.load.image('as1','./src/scenes/image/assests/png/Objects/ArrowSign.png')          
                 
     }
  
@@ -46,7 +46,7 @@ class GameScene3 extends Phaser.Scene {
             .setScale(0.7);
         grass = this.add.image(600, 390, "gl").setDepth(0.97).setScale(0.7);
         sky = this.add.image(650, 350, "sk").setDepth(0.9).setScale(0.7);
-        ArrowSign = this.physics.add.image(1210, 685, "as").setDepth(1);
+        ArrowSign1 = this.physics.add.image(1210, 685, "as1").setDepth(1);
 
         //slime
         slime = this.physics.add
@@ -92,11 +92,11 @@ class GameScene3 extends Phaser.Scene {
         
         //restart
         this.physics.add.collider(slime, bulletGroup, () => {
-            this.scene.start("DeadScene");
+            this.scene.start("DeadScene1");
         });
 
         //next level
-        this.physics.add.collider(slime, ArrowSign, () => {
+        this.physics.add.collider(slime, ArrowSign1, () => {
             this.scene.start("GameScene4");
         });
 

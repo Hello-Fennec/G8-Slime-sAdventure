@@ -5,10 +5,10 @@ let retryButton;
 let Background;
 let BannerSign;
 
-class DeadScene extends Phaser.Scene {
+class DeadScene1 extends Phaser.Scene {
     constructor(test) {
         super({
-            key: "DeadScene",
+            key: "DeadScene1",
         });
     }
 
@@ -51,7 +51,7 @@ class DeadScene extends Phaser.Scene {
             .setDepth(0.92);
         retryButton.setInteractive();
         retryButton.on("pointerdown", () => {
-            this.scene.start("GameScene2");
+            this.scene.start("GameScene3");
         });
         retryButton.on('pointerover',()=>{
             retryButton.setScale(0.25);
@@ -65,4 +65,4 @@ class DeadScene extends Phaser.Scene {
 
     update(delta, time) {}
 }
-export default DeadScene;
+export default DeadScene1;
